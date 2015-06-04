@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="v3.model">
+    <class name="User" table="web_user">
+        <id name="pk_user" column="pk_user">
+            <generator class="uuid"/>
+        </id>
+        <property name="username"/>
+        <property name="password"/>
+        <property name="email"/>
+        <property name="mobile"/>
+    </class>
+</hibernate-mapping>
