@@ -20,11 +20,11 @@ import v5.dao.UserDAOImpl;
 import v3.model.User;
 
 /**
- * ÓÃ»§Ãû²ÎÊı¼ì²é
+ * ç”¨æˆ·åå‚æ•°æ£€æŸ¥
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê8ÔÂ22ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´8æœˆ22æ—¥
  */
 public class UserParamCheckServlet extends HttpServlet {
 
@@ -39,9 +39,9 @@ public class UserParamCheckServlet extends HttpServlet {
 		String username = req.getParameter("user");
 		String password = req.getParameter("password");
 
-		// Õâ¾ä»°µÄÒâË¼£¬ÊÇÈÃä¯ÀÀÆ÷ÓÃutf8À´½âÎö·µ»ØµÄÊı¾İ
+		// è¿™å¥è¯çš„æ„æ€ï¼Œæ˜¯è®©æµè§ˆå™¨ç”¨utf8æ¥è§£æè¿”å›çš„æ•°æ®
 		resp.setHeader("Content-type", "text/html;charset=UTF-8");
-		// Õâ¾ä»°µÄÒâË¼£¬ÊÇ¸æËßservletÓÃUTF-8×ªÂë£¬¶ø²»ÊÇÓÃÄ¬ÈÏµÄISO8859
+		// è¿™å¥è¯çš„æ„æ€ï¼Œæ˜¯å‘Šè¯‰servletç”¨UTF-8è½¬ç ï¼Œè€Œä¸æ˜¯ç”¨é»˜è®¤çš„ISO8859
 		resp.setCharacterEncoding("UTF-8");
 		if (!isEmpty(username)) {
 			chechUsername(resp, username);
@@ -59,13 +59,13 @@ public class UserParamCheckServlet extends HttpServlet {
 			boolean isExisted = userDao.isExisted(username);
 			
 			if (isExisted) {
-				resp.getWriter().write("¶Ô²»Æğ£¡ÓÃ»§ÃûÒÑ´æÔÚ£¬ÇëĞŞ¸Ä¡£");
+				resp.getWriter().write("å¯¹ä¸èµ·ï¼ç”¨æˆ·åå·²å­˜åœ¨ï¼Œè¯·ä¿®æ”¹ã€‚");
 			} else {
 				resp.getWriter().write("OK");
 			}
 			resp.getWriter().flush();
 		} catch (Exception e) {
-			resp.getWriter().write("·şÎñÆ÷³öÁËµãÎÊÌâ¡£");
+			resp.getWriter().write("æœåŠ¡å™¨å‡ºäº†ç‚¹é—®é¢˜ã€‚");
 			resp.getWriter().flush();
 		}
 	}

@@ -25,11 +25,11 @@ import v3.dao.IUserDAO;
 import v3.dao.UserDAOFactory;
 
 /**
- * ×¢²áĞÂÓÃ»§
+ * æ³¨å†Œæ–°ç”¨æˆ·
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê8ÔÂ22ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´8æœˆ22æ—¥
  */
 public class RegisterServlet extends HttpServlet {
 

@@ -10,19 +10,19 @@ import javax.servlet.ServletContextListener;
 import v2.jdbc.ConnectionFactory;
 
 /**
- * ³õÊ¼»¯Êı¾İÔ´
+ * åˆå§‹åŒ–æ•°æ®æº
  * <p>
- * µ±web serverÆô¶¯µÄÊ±ºò£¬»á´¥·¢´Ë¼àÌıÆ÷¡£
- * ¼àÌıÆ÷»á½«web.xmlÖĞÅäÖÃµÄÊı¾İÔ´ĞÅÏ¢¶ÁÈ¡³öÀ´£¬²¢ÓÃËüÃÇÀ´³õÊ¼»¯ConnectionFactory¡£
+ * å½“web serverå¯åŠ¨çš„æ—¶å€™ï¼Œä¼šè§¦å‘æ­¤ç›‘å¬å™¨ã€‚
+ * ç›‘å¬å™¨ä¼šå°†web.xmlä¸­é…ç½®çš„æ•°æ®æºä¿¡æ¯è¯»å–å‡ºæ¥ï¼Œå¹¶ç”¨å®ƒä»¬æ¥åˆå§‹åŒ–ConnectionFactoryã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê8ÔÂ23ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´8æœˆ23æ—¥
  */
 public class InitDataSourceListener implements ServletContextListener {
 
 	/**
-	 * ÈİÆ÷³õÊ¼»¯Ê±
+	 * å®¹å™¨åˆå§‹åŒ–æ—¶
 	 * 
 	 * @see javax.servlet.ServletContextListener#contextInitialized(javax.servlet.ServletContextEvent)
 	 */
@@ -31,19 +31,19 @@ public class InitDataSourceListener implements ServletContextListener {
 		ServletContext context = arg0.getServletContext();
 		context.log("ServlectContext initialize starts.");
 		String driver = context.getInitParameter("driver");
-		context.log("¡¾Driver¡¿" + driver);
+		context.log("ã€Driverã€‘" + driver);
 		String url = context.getInitParameter("url");
-		context.log("¡¾URL¡¿" + url);
+		context.log("ã€URLã€‘" + url);
 		String user = context.getInitParameter("user");
-		context.log("¡¾User¡¿" + user);
+		context.log("ã€Userã€‘" + user);
 		String password = context.getInitParameter("password");
-		context.log("¡¾Password¡¿" + password);
+		context.log("ã€Passwordã€‘" + password);
 		ConnectionFactory.initProperties(driver, url, user, password);
 		context.log("ServlectContext initialize end.");
 	}
 	
 	/**
-	 * ÈİÆ÷¹Ø±ÕÊ±
+	 * å®¹å™¨å…³é—­æ—¶
 	 * 
 	 * @see javax.servlet.ServletContextListener#contextDestroyed(javax.servlet.ServletContextEvent)
 	 */

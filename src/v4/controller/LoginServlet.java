@@ -26,11 +26,11 @@ import v3.dao.IUserDAO;
 import v3.dao.UserDAOFactory;
 
 /**
- * µÇÂ¼
+ * ç™»å½•
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê8ÔÂ22ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´8æœˆ22æ—¥
  */
 public class LoginServlet extends HttpServlet {
 
@@ -45,7 +45,7 @@ public class LoginServlet extends HttpServlet {
 		String username = req.getParameter("user");
 		String password = req.getParameter("password");
 		
-		// Bean Validation ¿ÉÒÔÔÚ¸÷¸ö²ãÖ´ĞĞ
+		// Bean Validation å¯ä»¥åœ¨å„ä¸ªå±‚æ‰§è¡Œ
 		ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
 		Validator validator = validatorFactory.getValidator();
 		Set<ConstraintViolation<User>> violations = validator.validate(new User(username, password));

@@ -23,7 +23,7 @@ import v3.model.User;
 public class UserDAOImpl implements IUserDAO {
 
 	public void validate(String usename, String password) throws Exception {
-		// Bean Validation 可以在各个层执行
+		// Bean Validation 鍙互鍦ㄥ悇涓眰鎵ц
 		String checkMsg = checkUser(new User(usename, password));
 		if(!isEmpty(checkMsg)) {
 			throw new Exception(checkMsg);
@@ -38,7 +38,7 @@ public class UserDAOImpl implements IUserDAO {
 					.add(Restrictions.eq("password", password));
 			List<?> result = criteria.list();
 			if (result.isEmpty()) {
-				throw new Exception("未能找到用户.");
+				throw new Exception("鏈兘鎵惧埌鐢ㄦ埛.");
 			}
 		} finally {
 			if (session != null) {

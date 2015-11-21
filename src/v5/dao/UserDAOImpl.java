@@ -33,7 +33,7 @@ public class UserDAOImpl implements IUserDAO {
 					.add(Restrictions.eq("password", password));
 			List<?> result = criteria.list();
 			if (result.isEmpty()) {
-				throw new Exception("未能找到用户.");
+				throw new Exception("鏈兘鎵惧埌鐢ㄦ埛.");
 			}
 		} finally {
 			if (session != null) {

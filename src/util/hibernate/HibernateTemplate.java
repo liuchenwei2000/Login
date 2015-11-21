@@ -6,25 +6,25 @@ package util.hibernate;
 import org.hibernate.Session;
 
 /**
- * Hibernate²Ù×÷Ä£°å
+ * Hibernateæ“ä½œæ¨¡æ¿
  * <p>
- * ½«CRUD²Ù×÷Ê¹ÓÃµÄ³£¼û´úÂë½øĞĞ·â×°£¬ĞÎ³É´úÂëÄ£°å£¬±ÜÃâÁË·±ÔÓµÄÖØ¸´´úÂë¡£
+ * å°†CRUDæ“ä½œä½¿ç”¨çš„å¸¸è§ä»£ç è¿›è¡Œå°è£…ï¼Œå½¢æˆä»£ç æ¨¡æ¿ï¼Œé¿å…äº†ç¹æ‚çš„é‡å¤ä»£ç ã€‚
  * <p>
- * ±ÈÈçÊÂÎñĞÔ²Ù×÷¶¼ÊÇÈçÏÂ²½Öè£º
- * 1£¬»ñÈ¡session
- * 2£¬¿ªÆôÊÂÎñ
- * 3£¬Ö´ĞĞ¾ßÌå²Ù×÷
- * 4£¬Ìá½»ÊÂÎñ/Óöµ½Òì³£»Ø¹öÊÂÎñ£¬Å×³öÒì³£
- * 5£¬¹Ø±Õsession
+ * æ¯”å¦‚äº‹åŠ¡æ€§æ“ä½œéƒ½æ˜¯å¦‚ä¸‹æ­¥éª¤ï¼š
+ * 1ï¼Œè·å–session
+ * 2ï¼Œå¼€å¯äº‹åŠ¡
+ * 3ï¼Œæ‰§è¡Œå…·ä½“æ“ä½œ
+ * 4ï¼Œæäº¤äº‹åŠ¡/é‡åˆ°å¼‚å¸¸å›æ»šäº‹åŠ¡ï¼ŒæŠ›å‡ºå¼‚å¸¸
+ * 5ï¼Œå…³é—­session
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê8ÔÂ20ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´8æœˆ20æ—¥
  */
 public final class HibernateTemplate<T> {
 	
 	/**
-	 * ÔÚÊÂÎñÖĞÖ´ĞĞ²Ù×÷
+	 * åœ¨äº‹åŠ¡ä¸­æ‰§è¡Œæ“ä½œ
 	 */
 	public void runInTransaction(HibernateCallback callback) throws CRUDException {
 		Session session = null;
@@ -47,7 +47,7 @@ public final class HibernateTemplate<T> {
 	}
 
 	/**
-	 * Ê¹ÓÃÖ¸¶¨session£¬ÔÚÊÂÎñÖĞÖ´ĞĞ²Ù×÷£¬²Ù×÷½áÊøºósession²»»áclose
+	 * ä½¿ç”¨æŒ‡å®šsessionï¼Œåœ¨äº‹åŠ¡ä¸­æ‰§è¡Œæ“ä½œï¼Œæ“ä½œç»“æŸåsessionä¸ä¼šclose
 	 */
 	public void runInTransaction(Session session, HibernateCallback callback) throws CRUDException {
 		try {

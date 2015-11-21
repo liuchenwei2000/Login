@@ -6,11 +6,11 @@ package util;
 import java.util.Random;
 
 /**
- * ÖÀ÷»×Ó
+ * æ·éª°å­
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-6-16
+ * åˆ›å»ºæ—¥æœŸï¼š2014-6-16
  */
 public class RollUtil {
 	

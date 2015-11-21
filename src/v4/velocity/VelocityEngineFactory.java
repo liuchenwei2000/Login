@@ -7,16 +7,16 @@ import org.apache.velocity.app.Velocity;
 import org.apache.velocity.app.VelocityEngine;
 
 /**
- * VelocityEngine¹¤³§
+ * VelocityEngineå·¥å‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê8ÔÂ23ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´8æœˆ23æ—¥
  */
 public final class VelocityEngineFactory {
 
 	/**
-	 * ¸ù¾İÖ¸¶¨µÄVMÎÄ¼ş´æ·ÅÄ¿Â¼´´½¨VelocityEngine
+	 * æ ¹æ®æŒ‡å®šçš„VMæ–‡ä»¶å­˜æ”¾ç›®å½•åˆ›å»ºVelocityEngine
 	 */
 	public static VelocityEngine create(String loaderPath){
 		VelocityEngine ve = new VelocityEngine();

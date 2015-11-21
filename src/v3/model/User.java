@@ -12,9 +12,9 @@ import org.hibernate.validator.constraints.NotEmpty;
 /**
  * User Bean
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê8ÔÂ22ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´8æœˆ22æ—¥
  */
 public class User implements Serializable {
 
@@ -24,12 +24,12 @@ public class User implements Serializable {
 	private static final long serialVersionUID = -7351729135012380019L;
 
 	private String pk_user;
-	@NotEmpty(message = "ÓÃ»§Ãû²»¿ÉÎª¿Õ")
+	@NotEmpty(message = "ç”¨æˆ·åä¸å¯ä¸ºç©º")
 	private String username;
-	@NotEmpty(message = "ÃÜÂë²»¿ÉÎª¿Õ")
-	@Length(min = 8, max = 16, message = "ÃÜÂë³¤¶ÈĞèÔÚ8µ½16Î»Ö®¼ä")
+	@NotEmpty(message = "å¯†ç ä¸å¯ä¸ºç©º")
+	@Length(min = 8, max = 16, message = "å¯†ç é•¿åº¦éœ€åœ¨8åˆ°16ä½ä¹‹é—´")
 	private String password;
-	@Email(message = "Email¸ñÊ½²»ºÏ·¨")
+	@Email(message = "Emailæ ¼å¼ä¸åˆæ³•")
 	private String email;
 	private String mobile;
 
